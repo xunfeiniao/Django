@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from book import views
 
+'''对各个url进行索引'''
+
 urlpatterns = [
     path('', views.index,name = 'index'),
     path('add',views.add,name = 'add'),

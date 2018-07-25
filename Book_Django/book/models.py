@@ -2,8 +2,12 @@
 
 from django.db import models
 
-class Book(models.Model):
+'''
+    写好一个Book类，用该类来映射数据库，对数据库进行建表以及sql命令操作
+'''
 
+class Book(models.Model):
+    '''数据库中表格的字段以及属性'''
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100,null=False)
     author = models.CharField(max_length=100,null=False)

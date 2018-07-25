@@ -1,3 +1,6 @@
+<!--
+    该界面为公共界面，作为不变的部分进行共享，作为表头
+!-->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +16,9 @@
             <li><a href="{% url 'add' %}">发布图书</a></li>
         </ul>
     </nav>
+    <!--
+        其他部分的界面都在blcok中进行编辑
+    !-->
 {% block content %}{% endblock %}
 </body>
 </html>

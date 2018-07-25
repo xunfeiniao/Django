@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'book',
+    'book',#必须对所用到的app进行引用
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Book_Django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],#对templates所处的文件进行路径编辑，防止找不到该文件
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'Book_Django.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
+#对数据库进行详细编辑
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -123,5 +123,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+#将templates路径引用过来
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
