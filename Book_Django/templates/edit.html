@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for foo in book %}
+        <form action="{% url 'update' %}" method="post">
+            书名:<input type="text" name="name" value={{ foo.name }}>
+            作者:<input type="text" name="author" value={{ foo.author }}>
+            <input type="hidden" name="book_id" value={{ foo.id }}>
+            <input type="submit" name="提交" value="更新数据">
+        </form>
+    {% endfor %}
+{% endblock %}
